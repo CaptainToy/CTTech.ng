@@ -1,0 +1,176 @@
+.home-content {
+  height: 100vh;
+  width: 100%;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.home-content .texts {
+  flex: 1;
+}
+
+.home-content h2,
+.home-content h3,
+.home-content p {
+  color: var(--black);
+}
+
+.home-content h2 {
+  font-size: 50px;
+}
+
+.home-content h3 {
+  font-size: 42px;
+  margin-top: -8px;
+}
+
+.home-content h3 span {
+  color: var(--nav-main);
+}
+
+.home-content p {
+  font-size: 16px;
+  width: 80%;
+  text-align: justify;
+  margin: 4px 0 30px 0;
+}
+
+.home-content .illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content .illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-content {
+    padding: 0 30px;
+  }
+
+  .home-content h2 {
+    font-size: 45px;
+  }
+
+  .home-content h3 {
+    font-size: 40px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+  .home-content .illustration {
+   margin-top: -80%;
+  }
+  
+  .home-content .illustration img {
+    margin-top: -80%;
+
+  }
+}
+
+@media (max-width: 1050px) {
+  .home-content {
+    margin-top: 30%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content .texts {
+    margin-bottom: 30px;
+  }
+
+  .home-content p {
+    width: 100%;
+    margin-top: 10%;
+  }
+
+  .home-content .illustration img {
+    width: 100%;
+    margin-top: -80%;
+   }
+   
+   .home-content .illustration  {
+     margin-top: -80%;
+ 
+   }
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 0 20px;
+  }
+
+  .home-content h2 {
+    font-size: 36px;
+  }
+
+  .home-content h3 {
+    font-size: 30px;
+  }
+
+  .home-content p {
+    font-size: 13px;
+    width: 90%;
+  }
+
+  .home-content .illustration img {
+    width: 70%;
+    margin-top: -80%;
+   }
+   
+   .home-content .illustration {
+     margin-top: -80%;
+ 
+   }
+}
+
+@media (max-width: 576px) {
+  .home-content {
+    padding: 0 15px;
+  }
+
+  .home-content h2 {
+    font-size: 28px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .home-content .illustration img {
+    width: 100%;
+   }
+  
+   .home-content .illustration  {
+     margin-top: -80%;
+ 
+   }
+}
+
+@media (max-width: 400px) {
+  .home-content h2 {
+    font-size: 24px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 11px;
+  }
+}

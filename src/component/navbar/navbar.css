@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+:root {
+  --white: #fff;
+  --black: #24292d;
+  --nav-main: #046307;
+  --switchers-main: #79ff04;
+  --light-bg: #F0F8FF;
+}
+
+/* Navigation Styles */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: var(--nav-main);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar a {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.logo{
+  /* background: wheat; */
+  border-radius: 50%;
+  /* padding: 10px; */
+  width: 100px;
+  height: auto;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 8px;
+}
+
+.nav-links a {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 2000;
+}
+
+
+.hamburger .bi {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 5px;
+  transform-origin: 1px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* When Menu is Open */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Appearance Section */
+.appearance {
+  display: flex;
+  align-items: center;
+}
+
+.light-dark,
+.icons {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  background: var(--switchers-main);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  align-items: center;
+}
+
+.light-dark:hover,
+.icons:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Box */
+.color-icon {
+  position: relative;
+}
+
+.icons {
+  width: 70px;
+  margin-left: 14px;
+}
+
+.color-box {
+  position: absolute;
+  bottom: -133px;
+  right: 0;
+  min-height: 100px;
+  background: var(--white);
+  padding: 16px 20px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.color-icon.open .color-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.color-box::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: var(--white);
+  transform: rotate(45deg);
+}
+
+.color-switchers {
+  display: flex;
+}
+
+/* Color Switcher Buttons */
+.color-switchers .btn.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--switchers-main);
+}
+
+.color-switchers .btn.orange {
+  background: #F79F1F;
+}
+
+.color-switchers .btn.purple {
+  background: #8e44ad;
+}
+
+.color-switchers .btn.green {
+  background: #3A9943;
+}
+
+.get-btn {
+  margin-left: 20px;
+  
+}
+
+.get-btn button {
+  padding: 10px 23px;
+  border-radius: 30px;
+  border: 1px solid white;
+  color: white;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  /* border-radius: 12px; */
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.get-btn button:hover {
+  cursor: pointer;
+  /* background-color: #3a5311; */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #50C878;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 30px; */
+    display: flex;
+    z-index: 1001;
+  }
+
+  .appearance {
+    display: none;
+  }
+}
