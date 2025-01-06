@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./Bam.css";
+import logo from '../../assets/logo/newlogo.png'
 
 const Bam = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -111,11 +112,10 @@ const Bam = () => {
         {/* Sidebar */}
         <div className="bam-sidebar">
           <img
-            src="https://via.placeholder.com/70"
+            src={logo}
             alt="Profile"
             className="bam-profile-img"
           />
-          <h2>Abdusalam Korede</h2>
           <h3>Schedule a Meeting</h3>
           <h3>
             {selectedDate && selectedTime

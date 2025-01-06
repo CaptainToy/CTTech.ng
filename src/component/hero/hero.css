@@ -1,0 +1,97 @@
+:root {
+    --color-white-100: hsl(206, 0%, 100%);
+    --color-white-200: hsl(206, 0%, 90%);
+    --color-white-300: hsl(206, 0%, 80%);
+    --color-white-400: hsl(206, 0%, 65%);
+    --color-white-500: hsl(206, 0%, 50%);
+    --color-black-100: hsl(217, 30%, 18%);
+    --color-black-200: hsl(217, 27%, 15%);
+    --color-black-300: hsl(217, 27%, 12%);
+    --color-black-400: hsl(217, 52%, 9%);
+    --color-blue-100: hsl(215, 97%, 87%);
+    --color-blue-200: hsl(215, 96%, 78%);
+    --color-blue-300: hsl(215, 94%, 68%);
+    --color-blue-400: hsl(215, 91%, 60%);
+    --color-blue-500: hsl(215, 83%, 53%);
+    --color-blue-600: hsl(215, 76%, 48%);
+    --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .main {
+    height: 70vh;
+    overflow: hidden;
+    background-image: url(https://placehold.co/600x400);
+    background-image: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .section {
+    margin: 0 auto;
+    padding: 5rem 0 2rem;
+  }
+  
+  .container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+  
+  .banner-column {
+    display: grid;
+    row-gap: 2rem;
+    align-items: center;
+  }
+  
+  .banner-image {
+    max-width: 25rem;
+    margin: auto;
+  }
+  
+  .banner-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.5rem;
+  }
+  
+  .heading-xl {
+    font-size: clamp(2.648rem, 6vw, 4.241rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  .paragraph {
+    line-height: 1.5;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    background-color: var(--color-black-200);
+    color: var(--color-white-100);
+    border: none;
+    border-radius: 0.25rem;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-inline {
+    gap: 0.5rem;
+  }
+  
+  .btn-darken {
+    background-color: var(--color-black-200);
+  }
+  
+  /* .btn-darken:hover {
+    background-color: var(--color-blue-500);
+  } */
+  

@@ -1,11 +1,14 @@
 .bam-body {
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center;    /* Center vertically */
     min-height: 100vh;       /* Full viewport height */
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Optional: Add background color */
 }
 
 .bam-container {
@@ -14,14 +17,14 @@
     max-width: 1000px;
     width: 100%;
     height: auto; /* Allow flexible height */
-    background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    backdrop-filter: blur(21px) saturate(200%);
-    -webkit-backdrop-filter: blur(21px) saturate(200%);
-    /* background-color: rgba(17, 25, 40, 0.82); */
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
@@ -42,13 +45,47 @@
 }
 
 .bam-profile-img {
-    width: 70px;
-    height: 70px;
+    background-color: #fff;
+    width: 100px;
+    height: auto;
     border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
 }
-
+.react-calendar {
+    background: none;
+    padding: 10px;
+  }
+  
+  .react-calendar__tile {
+    color: white; /* White text for the numbers */
+    padding: 10px; /* Add 10px padding around the numbers */
+    margin: 5px; /* Add margin between the tiles to prevent them from merging */
+  }
+  
+  .react-calendar__tile:hover {
+    background: none;
+    color: black; /* White text for the numbers */
+    padding: 10px; /* Add 10px padding around the numbers */
+  }
+  
+  /* Change the background color of the active date to transparent */
+  .react-calendar__tile--active {
+    background: transparent !important; /* Set the background to transparent */
+    color: white; /* Optionally, keep the text color white */
+  }
+  
+  /* Add padding to the title */
+  .react-calendar__navigation button {
+    padding: 10px;
+  }
+  
+  /* Optional: Add margin between active and past dates */
+  .react-calendar__tile--disabled {
+    margin: 5px 0;
+  }
+  
+  
 .bam-sidebar h2 {
     font-size: 20px;
     font-weight: bold;
@@ -59,11 +96,12 @@
     font-size: 16px;
     margin: 15px 0;
     font-weight: 500;
+    color: white;
 }
 
 .bam-sidebar p {
     font-size: 14px;
-    color: #555;
+    color: white;
     line-height: 1.5;
 }
 
@@ -92,7 +130,7 @@
 .bam-timezone {
     margin-top: 20px;
     font-size: 14px;
-    color: #555;
+    color: white;
     text-align: center;
 }
 
@@ -111,6 +149,8 @@
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: 500;
+    color: white;
+
 }
 
 .bam-time-slots-grid {
@@ -167,6 +207,7 @@
 }
 
 .bam-form h3 {
+    color: white;
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -182,6 +223,7 @@
 }
 
 .bam-form form label {
+    color: white;
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
@@ -266,5 +308,199 @@
   #services option:hover {
     background-color: #007BFF; /* Adds hover effect */
     color: #fff; /* Changes text color on hover */
+  }
+  
+
+
+
+  /* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .bam-container {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    .bam-sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+      position: static;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .bam-profile-img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .bam-sidebar h2,
+    .bam-sidebar h3,
+    .bam-sidebar p {
+      font-size: 14px;
+    }
+  
+    .bam-time-slots-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .bam-form {
+      padding: 15px;
+    }
+  
+    .bam-form h3 {
+      font-size: 18px;
+    }
+  
+    .bam-form form input,
+    .bam-form form textarea,
+    .bam-form form select {
+      font-size: 12px;
+    }
+  
+    .location-container {
+      flex-direction: column;
+    }
+  
+    .location-item {
+      gap: 20px;
+    }
+  
+    #services {
+      width: 100%;
+    }
+  }
+  
+  /* Tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    .bam-container {
+      flex-direction: column;
+    }
+  
+    .bam-sidebar {
+      width: 100%;
+      padding: 20px;
+      border-right: none;
+      margin-bottom: 20px;
+    }
+  
+    .bam-sidebar h2 {
+      font-size: 18px;
+    }
+  
+    .bam-time-slots-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .bam-form {
+      padding: 20px;
+    }
+  
+    .bam-form h3 {
+      font-size: 20px;
+    }
+  
+    .bam-form form input,
+    .bam-form form textarea,
+    .bam-form form select {
+      font-size: 14px;
+    }
+  
+    .location-container {
+      flex-direction: column;
+    }
+  
+    .location-item {
+      gap: 20px;
+    }
+  
+    #services {
+      width: 100%;
+    }
+  }
+  
+  /* Laptops and larger devices (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .bam-container {
+      max-width: 100%;
+    }
+  
+    .bam-sidebar {
+      width: 100%;
+      padding: 20px;
+      border-right: none;
+      margin-bottom: 20px;
+    }
+  
+    .bam-time-slots-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .bam-form {
+      padding: 20px;
+    }
+  
+    .bam-form h3 {
+      font-size: 22px;
+    }
+  
+    .bam-form form input,
+    .bam-form form textarea,
+    .bam-form form select {
+      font-size: 16px;
+    }
+  
+    .location-container {
+      flex-direction: column;
+    }
+  
+    .location-item {
+      gap: 20px;
+    }
+  
+    #services {
+      width: 100%;
+    }
+  }
+  
+  /* Desktops (max-width: 1280px) */
+  @media (max-width: 1280px) {
+    .bam-container {
+      max-width: 100%;
+    }
+  
+    .bam-sidebar {
+      width: 350px;
+    }
+  
+    .bam-time-slots-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  
+    .bam-form {
+      padding: 20px;
+    }
+  
+    .bam-form h3 {
+      font-size: 24px;
+    }
+  
+    .bam-form form input,
+    .bam-form form textarea,
+    .bam-form form select {
+      font-size: 16px;
+    }
+  
+    .location-container {
+      flex-direction: row;
+    }
+  
+    .location-item {
+      gap: 40px;
+    }
+  
+    #services {
+      width: 100%;
+    }
   }
   

@@ -5,13 +5,14 @@ import Ourservices from '../component/ourServices/services'
 import CTA from '../component/CTA/CTA'
 import Industries from '../component/CWS/industry'
 import './home.css'
+import Hero from '../component/hero/hero'
 const Services =()=>{
     return(
        <>
             <Navbar/>
-           <div className='constant101'> <ServicesSkill/></div>
+           <div className='constant101'><Hero/></div>
+           <ServicesSkill/>
            <Industries/>
-
             <Ourservices/>
             {/* <CTA/> */}
             <Footer/>
