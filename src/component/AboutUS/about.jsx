@@ -15,7 +15,7 @@ const AboutUs = () => {
     justifyContent: 'center',
     position: 'absolute',
     left: '0',
-    top: '50%',
+    top: '20%',
     transform: 'translateY(-50%)',
   };
 
@@ -26,11 +26,11 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="sm:flex items-center max-w-screen-xl sm:block -mt-30">
+    <div className="sm:flex items-center max-w-screen-xl sm:block -mt-25">
       {/* Hide this section on small devices */}
       <div className="sm:w-1/2 p-10 hidden sm:block">
         <div className="image object-center text-center">
-          <img src="https://i.imgur.com/WbQnbas.png" alt="About Us" />
+          <img src="https://i.pinimg.com/originals/0f/65/c2/0f65c227b3198b5e00e6f19a2b4712de.gif" alt="About Us" />
         </div>
       </div>
       <div className="sm:w-1/2 p-5">

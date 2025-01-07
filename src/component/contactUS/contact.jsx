@@ -15,7 +15,7 @@ const Contact = () => {
                         </p>
                     </div>
                     <img 
-                        src={contact}
+                        src="https://i.pinimg.com/originals/c6/34/78/c634786383032dc04dfb30d835cf8650.gif"
                         alt="Contact Illustration" 
                         className="w-47 h-47 md:w-61 md:h-61 mx-auto md:mx-20"
                     />

@@ -39,7 +39,7 @@ const HomeContent = () => {
       </div>
       <div className="illustration">
         <img
-          src="https://i.imgur.com/WbQnbas.png"
+          src="https://i.pinimg.com/originals/ad/3a/a1/ad3aa168b76a1846c56edad68c218242.gif"
           alt="Software development illustration"
         />
       </div>

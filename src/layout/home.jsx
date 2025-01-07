@@ -12,26 +12,31 @@ import Contact from "../component/contactUS/contact";
 import CTA from "../component/CTA/CTA";
 import AboutUs from "../component/AboutUS/about";
 import Achievements from "../component/Achievements/Achievements";
-import Industries from "../component/CWS/industry"
+import Industries from "../component/CWS/industry";
+import GridTemplate from '../component/ourWork/workdone';
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <HomeContent />
-      <AboutUs/>
+      <AboutUs />
       <Services />
-      <Industries/>
       <div className="con">
-        <Text content="Explore our latest technologies!" />
+        <Text content="Services we can help you with 🚀" info="WHAT WE CAN DO FOR YOU" />
         <Card />
       </div>
-      <Achievements/>
+      <Industries />
+      <div className="con">
+        <Text content="Work that drives client satisfaction and success." info="OUR WORK WELL DONE" />
+        <GridTemplate />
+        </div>
+        <Achievements />
       <div className="stact">
         <Stact />
       </div>
       <div className="con">
-        <Text content="Hear from our happy clients!" />
+        <Text content="Hear from our happy clients!" info="Our happy Clients"/>
         <Testimonial />
       </div>
       <Contact />

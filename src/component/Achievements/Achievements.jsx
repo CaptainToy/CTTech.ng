@@ -11,8 +11,8 @@ const Achievements = () => {
       <div className="achievements-container">
         {/* Left Image Section */}
         <div className="achievements-image-wrapper">
-          <img src={img1} alt="Team collaboration" className="main-image" />
-          <img src={img2} alt="Graphs and data" className="highlight-image" />
+          <img src="https://i.pinimg.com/736x/7d/08/63/7d086325224560fe68dc4f3850a68f98.jpg" alt="Team collaboration" className="main-image" />
+          <img src="https://i.pinimg.com/736x/d0/86/c8/d086c8996e029b8cafe10dfa78a66ae9.jpg" alt="Graphs and data" className="highlight-image" />
         </div>
 
         {/* Right Text Section */}
