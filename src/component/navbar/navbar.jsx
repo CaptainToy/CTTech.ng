@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link to="/FAQ">FAQ</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <a herf="#contact">Contact</a>
           </li>
           <li>
             <a href="#" onClick={display} className="Book">Book a Meeting</a>

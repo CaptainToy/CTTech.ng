@@ -1,75 +1,68 @@
 const Testimonial = () => {
     return(
-     <div style={{ backgroundColor: "#F0F8FF" }}>
-        <section className="dark:bg-black-100 dark:text-black-800">
-            <div className="container px-6 py-12 mx-auto">
-                <div className="grid items-center gap-4 xl:grid-cols-5">
-                    <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
-                        <h2 className="text-4xl font-bold">Duo assum utroque appetere an</h2>
-                        <p className="dark:text-gray-600">
-                            Pri ex magna scaevola moderatius. Nullam accommodare no vix, est ei diceret alienum, et sit cetero malorum. Et sea iudico consequat, est sanctus adipisci ex.
-                        </p>
-                    </div>
-                    <div className="p-6 xl:col-span-3">
-                        <div className="grid gap-4 md:grid-cols-2">
-                            <div className="grid content-center gap-4">
-                                <div className="p-6 rounded shadow-md dark:bg-gray-50">
-                                    <p>
-                                        An audire commodo habemus cum. Ne sed corrumpit repudiandae. Tota aliquip democritum pro in, nec democritum intellegam ne. Propriae volutpat dissentiet ea sit, nec at lorem inani tritani, an ius populo perfecto vituperatoribus. Eu cum case modus salutandi, ut eum vocent sensibus reprehendunt.
-                                    </p>
-                                    <div className="flex items-center mt-4 space-x-4">
-                                        <img src="https://source.unsplash.com/50x50/?portrait?1" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
-                                        <div>
-                                            <p className="text-lg font-semibold">Leroy Jenkins</p>
-                                            <p className="text-sm dark:text-gray-600">CTO of Company Co.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-6 rounded shadow-md dark:bg-gray-50">
-                                    <p>
-                                        Sit wisi sapientem ut, pri civibus temporibus voluptatibus et, ius cu hinc fabulas. Nam meliore minimum et, regione convenire cum id. Ex pro eros mucius consectetuer, pro magna nulla nonumy ne, eam putent iudicabit consulatu cu.
-                                    </p>
-                                    <div className="flex items-center mt-4 space-x-4">
-                                        <img src="https://source.unsplash.com/50x50/?portrait?2" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
-                                        <div>
-                                            <p className="text-lg font-semibold">Leroy Jenkins</p>
-                                            <p className="text-sm dark:text-gray-600">CTO of Company Co.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="grid content-center gap-4">
-                                <div className="p-6 rounded shadow-md dark:bg-gray-50">
-                                    <p>
-                                        Putant omnium elaboraret per ut. Id dicta tritani nominavi quo, mea id justo errem elaboraret. Agam mollis scripserit ea his, ut nec postea verear persecuti. Ea noster senserit eam, ferri omittantur ei nec. Id mel solet libris efficiantur, commune explicari et eos. Case movet ad est, sed tota vocent appetere ea.
-                                    </p>
-                                    <div className="flex items-center mt-4 space-x-4">
-                                        <img src="https://source.unsplash.com/50x50/?portrait?3" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
-                                        <div>
-                                            <p className="text-lg font-semibold">Leroy Jenkins</p>
-                                            <p className="text-sm dark:text-gray-600">CTO of Company Co.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-6 rounded shadow-md dark:bg-gray-50">
-                                    <p>
-                                        Te omnes virtute volutpat sed. Ei esse eros interesset vel, ei populo denique ocurreret vix, eu cum pertinax mandamus vituperatoribus. Solum nihil luptatum per ex, ei amet viderer eos. Ea illum labitur mnesarchum pro. Eius meis salutandi ei nam, alterum expetenda et nec. Expetenda intellegat at eum, per mazim sanctus honestatis ad. Ei noluisse invenire vix. Te ancillae patrioque qui, probo bonorum vivendum ex vim.
-                                    </p>
-                                    <div className="flex items-center mt-4 space-x-4">
-                                        <img src="https://source.unsplash.com/50x50/?portrait?4" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
-                                        <div>
-                                            <p className="text-lg font-semibold">Leroy Jenkins</p>
-                                            <p className="text-sm dark:text-gray-600">CTO of Company Co.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-     </div>
+    //  <div style={{ backgroundColor: "#F0F8FF" }}>
+       <section className="my-8 dark:bg-gray-100 dark:text-gray-800">
+	<div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
+		<div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+			<div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-50">
+				<p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-800">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-lime-600">
+						<path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
+						<path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
+					</svg>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute right-0 w-8 h-8 dark:text-lime-600">
+						<path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
+						<path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
+					</svg>
+				</p>
+			</div>
+			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-lime-600 dark:text-gray-50">
+				<img src="https://source.unsplash.com/50x50/?portrait?1" alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300" />
+				<p className="text-xl font-semibold leading-tight">Distinctio Animi</p>
+				<p className="text-sm uppercase">Aliquam illum</p>
+			</div>
+		</div>
+		<div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+			<div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-50">
+				<p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-800">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-lime-600">
+						<path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
+						<path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
+					</svg>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute right-0 w-8 h-8 dark:text-lime-600">
+						<path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
+						<path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
+					</svg>
+				</p>
+			</div>
+			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-lime-600 dark:text-gray-50">
+				<img src="https://source.unsplash.com/50x50/?portrait?2" alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300" />
+				<p className="text-xl font-semibold leading-tight">Distinctio Animi</p>
+				<p className="text-sm uppercase">Aliquam illum</p>
+			</div>
+		</div>
+		<div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+			<div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-50">
+				<p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-800">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-lime-600">
+						<path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
+						<path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
+					</svg>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi exercitationem molestias possimus facere.
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="absolute right-0 w-8 h-8 dark:text-lime-600">
+						<path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
+						<path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
+					</svg>
+				</p>
+			</div>
+			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-lime-600 dark:text-gray-50">
+				<img src="https://source.unsplash.com/50x50/?portrait?3" alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300" />
+				<p className="text-xl font-semibold leading-tight">Distinctio Animi</p>
+				<p className="text-sm uppercase">Aliquam illum</p>
+			</div>
+		</div>
+	</div>
+</section>
+    //  </div>
     )
 }
 

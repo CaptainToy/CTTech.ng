@@ -2,7 +2,7 @@ import contact from './contact.svg'
 import './contact.css'
 const Contact = () => {
     return (
-        <div className="max-w-100% mx-auto px-6 py-12 md:py-20">
+        <div className="max-w-100% mx-auto px-6 py-12 md:py-20" id="contact">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 {/* Left Section */}
                 <div className="flex flex-col justify-between space-y-6">
