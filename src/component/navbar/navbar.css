@@ -217,11 +217,13 @@ nav {
   width: 100%;
   padding: 10px 23px;
   border-radius: 30px;
-  border: 1px solid green;
-  color: black;
+  border: 1px solid #F3FF11;
+  /* border: 1px solid #4AB90E; */
+  color: white;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  /* background-color: ; */
+  background-color: #4AB90E;
+  /* background-color: #F3FF11; */
   /* border-radius: 12px; */
   white-space: nowrap;  
 

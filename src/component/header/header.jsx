@@ -28,7 +28,7 @@ const HomeContent = () => {
               delaySpeed={1500}
               onLoopDone={handleDone} // Optional callback
               onType={handleType} // Optional callback
-              style={{ color: 'green' }}
+              style={{ color: '#4AB90E' }}
             />
           </span>
         </h3>

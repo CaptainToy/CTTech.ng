@@ -79,7 +79,7 @@
     box-shadow: 0 4px 10px rgba(43, 41, 41, 0.1);
     backdrop-filter: blur(25px) saturate(117%);
     -webkit-backdrop-filter: blur(25px) saturate(117%);
-    background-color: rgba(29, 66, 136, 0.4);
+    background-color: #4AB90E;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
   }

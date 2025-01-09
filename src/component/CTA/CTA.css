@@ -1,0 +1,137 @@
+.subscribe-container {
+    display: flex;
+    /* background-color: rgb(57, 164, 57); */
+    padding: 70px;
+    text-align: left;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.subscribe-display{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+.subscribe-header {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    margin-left: 13px;
+}
+
+.subscribe-description {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.parent-container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding: 20px; 
+    margin-left: 20rem;
+}
+
+.subscribe-form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.subscribe-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    font-size: 16px;
+    outline: none;
+    width: 500px;
+
+    height:auto;
+}
+
+.subscribe-input:focus {
+    border-color: lightgreen;
+}
+
+.subscribe-button {
+    background-color: #4AB90E;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 500px;
+    margin-left: -10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #50a323;
+    /* transform: translateY(-2px); */
+}
+
+
+/* Media Query for max-width 1200px */
+@media (max-width: 1200px) {
+    .subscribe-container {
+        padding: 50px;
+    }
+    .subscribe-header {
+        font-size: 35px;
+    }
+    .subscribe-description {
+        font-size: 18px;
+    }
+    .subscribe-input, .subscribe-button {
+        width: 450px;
+    }
+    .parent-container {
+        margin-left: 10rem;
+    }
+}
+
+/* Media Query for max-width 768px */
+@media (max-width: 768px) {
+    .subscribe-container {
+        flex-direction: column;
+        padding: 40px;
+    }
+    .subscribe-header {
+        font-size: 30px;
+    }
+    .subscribe-description {
+        font-size: 16px;
+    }
+    .subscribe-input, .subscribe-button {
+        width: 100%;
+    }
+    .parent-container {
+        margin-left: 5rem;
+        padding: 15px;
+    }
+}
+
+/* Media Query for max-width 600px */
+@media (max-width: 600px) {
+    .subscribe-container {
+        padding: 20px;
+    }
+    .subscribe-header {
+        font-size: 25px;
+    }
+    .subscribe-description {
+        font-size: 14px;
+    }
+    .subscribe-input, .subscribe-button {
+        width: 100%;
+        font-size: 14px;
+    }
+    .parent-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+}

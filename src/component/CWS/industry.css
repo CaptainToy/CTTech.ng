@@ -1,12 +1,12 @@
 .industries-section {
+  margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-    /* background-color: #F0F8FF; */
+    background-color: white;
   }
-  
-  .content {
+.content {
     flex: 1;
     max-width: 40%;
   }
@@ -18,7 +18,7 @@
   }
   
   .focus-sectors {
-    color: #1abc9c;
+    /* color: #1abc9c; */
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
@@ -99,14 +99,7 @@
   }
   
 
-  .industries-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #F0F8FF;
-  }
-  
+
   .content {
     flex: 1;
     max-width: 40%;

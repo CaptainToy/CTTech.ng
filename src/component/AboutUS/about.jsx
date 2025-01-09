@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   const iconStyle = {
-    backgroundColor: '#50C878',
+    backgroundColor: '#4AB90E',
     border: '1px soild black',
     fontSize: '20px',
     color: 'white',
@@ -41,7 +41,7 @@ const AboutUs = () => {
             <div className="line"></div>
           </div>
           <h2 className="my-4 font-bold text-3xl sm:text-4xl text-center">
-            About <span className="text-green-600">CTTech</span>
+            About <span className="text-green-600" style={{color:"#4AB90E"}}>CTTech</span>
           </h2>
           <div style={containerStyle}>
             At CTTech, we specialize in turning ideas into impactful digital solutions. As a leading tech company, we provide a comprehensive range of services, including mobile app development, web and web app development, SEO optimization, and domain and hosting solutions.

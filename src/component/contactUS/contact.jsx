@@ -7,9 +7,10 @@ const Contact = () => {
                 {/* Left Section */}
                 <div className="flex flex-col justify-between space-y-6">
                     <div className="space-y-4">
-                        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-black-800 dark:text-black-100">
-                            Let's Connect!
-                        </h2>
+                    <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-black-800 dark:text-black-100 text-center">
+    Let's Connect!
+</h2>
+
                         <p className="text-lg text-black-600 dark:text-black-400">
                             Reach out to us for any inquiries or just to say hi. We're here to help you!
                         </p>
@@ -50,15 +51,17 @@ const Contact = () => {
                             Message
                         </label>
                         <textarea 
-                            id="message" 
-                            rows="4" 
-                            placeholder="Write your message here" 
-                            className="mt-1 block w-full px-4 py-2 border border-black-300 dark:border-black-700 rounded-md shadow-sm focus:ring-lime-500 focus:border-lime-500 dark:bg-black-700 dark:text-black-100"
-                        ></textarea>
+    id="message" 
+    rows="4" 
+    placeholder="Write your message here" 
+    className="mt-1 block w-full px-4 py-2 border border-black-300 dark:border-black-700 rounded-md shadow-sm focus:ring-lime-500 focus:border-lime-500 dark:bg-black-700 dark:text-black-100 resize-none"
+></textarea>
+
                     </div>
                     <button 
                         type="submit" 
-                        className="w-full py-3 px-6 bg-lime-600 text-white font-semibold rounded-md shadow-md hover:bg-lime-500 focus:ring-4 focus:ring-lime-300 dark:focus:ring-lime-700">
+                        className="w-full py-3 px-6 bg-lime-600 text-white font-semibold rounded-md shadow-md hover:bg-lime-500 focus:ring-4 focus:ring-lime-300 dark:focus:ring-lime-700"
+                        style={{background: "#4AB90E"}}>
                         Send Message
                     </button>
                 </form>

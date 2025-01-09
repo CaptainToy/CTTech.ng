@@ -79,9 +79,9 @@ const GridTemplate = () => {
           <img
             src={img1}
             alt=""
-            className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
+            className="object-cover w-300 h-60 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
           />
-          <div className="p-6 space-y-2 lg:col-span-5">
+          <div className="p-5 space-y-2 lg:col-span-5">
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
               <a href="https://brij.ng/">Brij.ng</a>
             </h3>
