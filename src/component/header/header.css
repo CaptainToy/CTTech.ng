@@ -47,9 +47,11 @@
 
 .home-content .illustration img {
   max-width: 100%;
-  height: auto;
+  height: 70%;
 }
-
+.illustration img{
+  width: 75%;
+}
 /* Responsive Design */
 @media (max-width: 1200px) {
   .home-content {

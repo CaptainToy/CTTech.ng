@@ -1,16 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { gsap } from "gsap";
 import Logo from '../../assets/logo/newlogo.png';
 import "./navbar.css";
 
 const Navbar = () => {
-  const [isColorBoxOpen, setIsColorBoxOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const linksRef = useRef([]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => {
+      if (!prev) {
+        // Animate links in sequence when menu opens
+        gsap.fromTo(
+          linksRef.current,
+          { opacity: 0, y: -20 },
+          { opacity: 1, y: 0, stagger: 0.2, duration: 0.5, ease: "power2.out" }
+        );
+      }
+      return !prev;
+    });
   };
 
   const display = () => {
@@ -32,38 +43,30 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Icon */}
-        <div className={`hamburger ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <div
+          className={`hamburger ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
 
         <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/About">About</Link>
-          </li>
-          <li>
-            <Link to="/Work">Our Work</Link>
-          </li>
-          {/* <li>
-            <Link to="/services">Services</Link>
-          </li> */}
-          <li>
-            <Link to="/FAQ">FAQ</Link>
-          </li>
-          <li>
-            <a herf="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#" onClick={display} className="Book">Book a Meeting</a>
+          {["Home", "About", "Our Work", "FAQ", "Contact"].map((text, index) => (
+            <li key={index} ref={(el) => (linksRef.current[index] = el)}>
+              <Link to={`/${text === "Home" ? "" : text}`}>{text}</Link>
+            </li>
+          ))}
+          <li ref={(el) => (linksRef.current[5] = el)}>
+            <a href="#" onClick={display} className="Book">
+              Book a Meeting
+            </a>
           </li>
         </ul>
 
         <div className="appearance">
-          <div className={`color-icon ${isColorBoxOpen ? "open" : ""}`}>
+          <div className={`color-icon`}>
             <div className="get-btn">
               <button onClick={display}>Book a Meeting</button>
             </div>
