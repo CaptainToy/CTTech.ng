@@ -1,10 +1,16 @@
 import "./card.css";
+import React, { useEffect, useRef } from "react";
 import Back from '../../assets/img/backend.png';
 import Figma from '../../assets/img/figma.png';
 import Front from '../../assets/img/front-end-programming.png';
 import SEO from '../../assets/img/search-engine.png';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Card = () => {
+    const cardref = useRef([]);
+  
   const services = [
     {
       icon: <i className="bi bi-phone"></i>,
@@ -32,11 +38,28 @@ const Card = () => {
       description: "Quisque neque mus id dapibus egestas platea sagittis fames nunc.",
     },
   ];
-
+  useEffect(() => {
+    cardref.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: index * 0.2,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+          },
+        }
+      );
+    });
+  }, []);
   return (
     <div className="services-section">
       {services.map((service, index) => (
-        <div className="service-card" key={index}>
+        <div className="service-card" key={index} ref={(el) => (cardref.current[index] = el)}>
           <div className="icon">
             {typeof service.icon === "string" && service.icon.endsWith(".png") ? (
               <img src={service.icon} alt={service.title} />

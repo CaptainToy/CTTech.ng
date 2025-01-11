@@ -6,7 +6,8 @@ import About from './layout/about';
 import Bam from './component/BookAmeating/BAM';
 import Work from './layout/skills';
 import Services from "./layout/services";
-import FAQContainer from './layout/FAQContainer';  
+import FAQContainer from './layout/FAQContainer'; 
+import UI from './layout/UIComponent' 
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Work" element={<Work />} />
         <Route path="/services" element={<Services />} />
         <Route path="/FAQ" element={<FAQContainer />} />
+        <Route path="/UI" element={<UI />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

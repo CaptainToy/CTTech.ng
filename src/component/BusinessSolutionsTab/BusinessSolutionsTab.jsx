@@ -3,9 +3,11 @@ import './BusinessSolutionTab.css';
 import sellImage from '../../assets/img/web.png';
 import uiuxImage from '../../assets/img/App.svg'; 
 import growImage from '../../assets/img/UI.svg';
+import { useNavigate } from 'react-router-dom';
 
 const BusinessSolutionsTab = () => {
   const [activeTab, setActiveTab] = useState('Web');
+  const navigate = useNavigate(); // Use the useNavigate hook
 
   // Tab content mapping
   const tabContent = {
@@ -13,7 +15,7 @@ const BusinessSolutionsTab = () => {
       title: "Web Development",
       description: "Increase your orders by reaching more customers through an online marketplace and a network of couriers. At CTTech, with over 8 years of industry experience and a commitment to excellence, we specialize in crafting dynamic and functional web solutions tailored to your unique business needs. Our skilled web architects leverage cutting-edge technologies and best-fit strategies to deliver secure and seamless web solutions, including PWAs, e-commerce platforms, and dynamic web applications, optimized for all devices.",
       links: [
-        { text: "Web Application Development Services", href: "#" },
+        { text: "Web Application Development Services", onClick: () => navigate("/UI") },
         { text: "Frontend Development Services", href: "#" },
       ],
     },
@@ -54,9 +56,15 @@ const BusinessSolutionsTab = () => {
         <ul>
           {links?.map((link, index) => (
             <li key={index}>
-              <a href={link.href}>
-                <i className="bi bi-check-square"></i> {link.text}
-              </a>
+              {link.onClick ? (
+                <button className="link-button" onClick={link.onClick}>
+                  <i className="bi bi-check-square"></i> {link.text}
+                </button>
+              ) : (
+                <a href={link.href}>
+                  <i className="bi bi-check-square"></i> {link.text}
+                </a>
+              )}
             </li>
           ))}
         </ul>

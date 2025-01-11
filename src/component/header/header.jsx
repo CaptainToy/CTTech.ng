@@ -9,6 +9,8 @@ const HomeContent = () => {
   const imageRef = useRef(null);
 
   useEffect(() => {
+    if (!sectionRef.current || !textRef.current || !imageRef.current) return;
+
     const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.out" } });
 
     // Fade-in animation for the entire section
@@ -23,7 +25,7 @@ const HomeContent = () => {
       textRef.current,
       { x: "-100%", opacity: 0 },
       { x: "0%", opacity: 1 },
-      "-=0.5" 
+      "-=0.5"
     );
 
     // Bounce left and right animation for the illustration image
@@ -33,9 +35,9 @@ const HomeContent = () => {
       {
         x: "50px",
         duration: 0.5,
-        repeat: 4, 
-        yoyo: true, 
-        ease: "power1.inOut", 
+        repeat: 3,
+        yoyo: true,
+        ease: "power1.inOut",
         onComplete: () => {
           gsap.to(imageRef.current, { x: "0px", duration: 0.3 });
         },
@@ -45,6 +47,26 @@ const HomeContent = () => {
 
   return (
     <section className="home-content" ref={sectionRef}>
+      <div className="relative h-screen">
+        {/* Background Pattern */}
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 -z-10 h-full w-full bg-white"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+                linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)`,
+              backgroundSize: "6rem 4rem",
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4">
+          <div className="max-w-3xl text-center">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+          </div>
+        </div>
+      </div>
       <div className="texts" ref={textRef}>
         <h2 className="text">There is more than just</h2>
         <h3 className="text">

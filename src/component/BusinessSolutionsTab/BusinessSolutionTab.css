@@ -41,7 +41,7 @@ h1 {
 }
 
 .business-tab.active {
-  background-color: #50C878;
+  background-color: #4AB90E;
   color: white;
 }
 
@@ -113,6 +113,11 @@ ul li a {
   text-decoration: none;
   font-weight: bold;
 }
+ul li link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 ul li a:hover {
   text-decoration: underline;
@@ -142,7 +147,7 @@ ul li a:hover {
 @media (max-width: 1024px) {
   /* Ensure tabs and content fit 100% */
   .business-tabs {
-      gap: 50px;  /* Adjust gap for medium screens */
+      gap: 50px;  
       padding: 8px;
   }
   
@@ -170,8 +175,9 @@ ul li a:hover {
 
   /* Adjust tab styling for smaller screens */
   .business-tabs {
+    width: 100%;
       gap: 20px;
-      padding: 6px;
+      padding: 10px 50px;
   }
   
   .business-tab {
@@ -184,5 +190,6 @@ ul li a:hover {
   .business-content p, 
   .business-content small {
       width: 100%;
+      padding: 0;
   }
 }
