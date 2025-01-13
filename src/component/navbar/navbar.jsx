@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 import Logo from "../../assets/logo/newlogo.png";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -9,13 +11,25 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const linksRef = useRef([]);
+  const MySwal = withReactContent(Swal);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  const display = () => {
-    navigate("/Bam");
+  const handleBookMeeting = () => {
+    MySwal.fire({
+      title: "Confirm Booking",
+      text: "Please book a meeting only if you are certain you will attend. This helps ensure availability for others who are serious about scheduling. Thank you for respecting our time.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Proceed",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/BamCom");
+      }
+    });
   };
 
   // Animate links when menu opens
@@ -63,7 +77,7 @@ const Navbar = () => {
             )
           )}
           <li ref={(el) => (linksRef.current[5] = el)}>
-            <a href="#" onClick={display} className="Book">
+            <a href="#" onClick={(e) => e.preventDefault(handleBookMeeting())} className="Book">
               Book a Meeting
             </a>
           </li>
@@ -72,7 +86,7 @@ const Navbar = () => {
         <div className="appearance">
           <div className={`color-icon`}>
             <div className="get-btn">
-              <button onClick={display}>Book a Meeting</button>
+              <button onClick={handleBookMeeting}>Book a Meeting</button>
             </div>
           </div>
         </div>

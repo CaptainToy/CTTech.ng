@@ -14,6 +14,8 @@ import AboutUs from "../component/AboutUS/about";
 import Achievements from "../component/Achievements/Achievements";
 import Industries from "../component/CWS/industry";
 import GridTemplate from '../component/ourWork/workdone';
+import BusinessSolutionsTab from "../component/BusinessSolutionsTab/BusinessSolutionsTab";
+
 
 const Home = () => {
   return (

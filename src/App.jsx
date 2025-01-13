@@ -9,6 +9,8 @@ import Services from "./layout/services";
 import FAQContainer from './layout/FAQContainer'; 
 import UI from './layout/UIComponent';
 import NoInternet from './component/NetWorkError/network';
+import BamCom from "./layout/BamCom"
+import Form from './component/form/form'
 
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -37,6 +39,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/FAQ" element={<FAQContainer />} />
           <Route path="/UI" element={<UI />} />
+          <Route path="/BamCom" element={<BamCom />} />
+          <Route path="/Form" element={<Form />} />
           <Route path="*" element={<Error />} />
         </Routes>
       ) : (

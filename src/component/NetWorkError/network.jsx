@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './network.css'; 
+// import './network.css'; 
 
 const NoInternet = () => {
   const stackContainerRef = useRef(null);
@@ -76,7 +76,7 @@ const NoInternet = () => {
   }, [counter]);
 
   return (
-    <div className="container">
+    <div className="container-network">
       <div className="error">
         <h1>500</h1>
         <h2>Error</h2>
@@ -95,7 +95,7 @@ const NoInternet = () => {
                 '--vertdist': `${-25 + index * 5}px`,
               }}
             >
-              <div className="card">
+              <div className="card-network">
                 <div className="writing">
                   <div className="topbar">
                     <div className="red"></div>

@@ -1,6 +1,45 @@
 import contact from './contact.svg'
 import './contact.css'
 const Contact = () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData();
+        formData.append("access_key", "8ab6f305-eefb-492a-ab31-82f8466f99ea");
+        formData.append("Full Name", Full_Name);
+        formData.append("email", email);
+        formData.append("message", message);
+const result = await Swal.fire({
+      title: "Confirm Submission",
+      html: `
+        <strong>Full_Name:</strong> ${Full_Name}
+      `,
+      icon: "info",
+      showCancelButton: true,
+      confirmButtonText: "Submit",
+      cancelButtonText: "Cancel",
+    });
+
+    if (result.isConfirmed) {
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          Swal.fire("Success", "Your information has been submitted!", "success").then(() => {
+            window.location.href = "/"; 
+          });
+        } else {
+          Swal.fire("Error", data.message, "error");
+        }
+      } catch (error) {
+        Swal.fire("Error", "An error occurred while submitting the form.", "error");
+      }
+    }
+  };    
     return (
         <div className="max-w-100% mx-auto px-6 py-12 md:py-20" id="contact">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
