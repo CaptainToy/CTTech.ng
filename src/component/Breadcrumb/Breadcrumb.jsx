@@ -2,10 +2,7 @@ import React from "react";
 
 const Breadcrumb = ({ pageName, breadcrumbs }) => {
   return (
-    // <section
-    //   aria-label="breadcrumb"
-    //   className="w-full h-[300px] flex justify-center items-center bg-gradient-to-r from-green-500 to-yello-500  to-yello-300 text-white"
-    // >
+ 
        <section
   aria-label="breadcrumb"
   style={{
