@@ -26,7 +26,7 @@ const NoInternet = () => {
         cardNodes.forEach((elem) => {
           elem.classList.add('pokeup');
 
-          elem.addEventListener('click', () => {
+          const handleCardClick = () => {
             const updown = [800, -800];
             const randomY = updown[Math.floor(Math.random() * updown.length)];
             const randomX = Math.floor(Math.random() * 1000) - 1000;
@@ -34,7 +34,9 @@ const NoInternet = () => {
             elem.style.transition = 'transform 1s ease, opacity 2s';
             elem.style.opacity = '0';
             setCounter((prevCounter) => prevCounter - 1);
-          });
+          };
+
+          elem.addEventListener('click', handleCardClick);
 
           const numLines = randomIntFromInterval(5, 10);
           const ul = elem.querySelector('.code ul');
@@ -76,40 +78,18 @@ const NoInternet = () => {
   }, [counter]);
 
   return (
-    <div className="container-network">
-      <div className="error">
-        <h1>500</h1>
-        <h2>Error</h2>
-        <p>
-         Check your internet connection to access this page
-        </p>
-      </div>
-      <div className="stack-container" ref={stackContainerRef}>
-        {[...Array(6)].map((_, index) => (
-          <div className="card-container" key={index}>
-            <div
-              className="perspec"
-              style={{
-                '--spreaddist': `${125 - index * 25}px`,
-                '--scaledist': `${0.75 + index * 0.05}`,
-                '--vertdist': `${-25 + index * 5}px`,
-              }}
-            >
-              <div className="card-network">
-                <div className="writing">
-                  <div className="topbar">
-                    <div className="red"></div>
-                    <div className="yellow"></div>
-                    <div className="green"></div>
-                  </div>
-                  <div className="code">
-                    <ul></ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+    <div className="relative h-screen overflow-hidden bg-indigo-900">
+      <img src="https://i.pinimg.com/736x/47/03/17/470317ba631dcc4f2f3c6182b222783c.jpg" className="absolute object-cover w-full h-full" />
+      <div className="absolute inset-0 bg-black opacity-25"></div>
+      <div className="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40">
+        <div className="relative z-10 flex flex-col items-center w-full font-mono">
+          <h1 className="mt-4 text-5xl font-extrabold leading-tight text-center text-white">
+            You're alone here
+          </h1>
+          <p className="font-extrabold text-white text-8xl my-44 animate-bounce">
+            404
+          </p>
+        </div>
       </div>
     </div>
   );

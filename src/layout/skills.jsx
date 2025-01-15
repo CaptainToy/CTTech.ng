@@ -3,7 +3,10 @@ import Navbar from '../component/navbar/navbar';
 import FAQ from '../component/FAQ/FAQ';
 import './home.css';
 import Footer from '../component/Footer/footer';
-import Breadcrumb from '../component/Breadcrumb/Breadcrumb'; // Fixed the import name
+import Breadcrumb from '../component/Breadcrumb/Breadcrumb'; 
+import Img1 from "../assets/4.jpg"; 
+import Text from '../component/text/text';
+
 
 const About = () => {
   const breadcrumbs = [
@@ -14,10 +17,12 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className="con"><Breadcrumb pageName="About Us" breadcrumbs={breadcrumbs} /></div>
-      <div className="co">
+      <div className="con"><Breadcrumb pageName="About Us" breadcrumbs={breadcrumbs}  backgroundImage={Img1}/></div>
+      <div className="consts">
+        <Text content="Hear from our happy clients!" info="Our happy Clients"/>
         <Workdone />
       </div>
+      {/* <Button/> */}
       <Footer />
     </>
   );

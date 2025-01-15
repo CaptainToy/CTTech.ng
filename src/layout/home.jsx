@@ -35,7 +35,7 @@ const Home = () => {
         </div>
         <Achievements />
       <div className="stact">
-        <Stact />
+        {/* <Stact /> */}
       </div>
       <div className="con">
         <Text content="Hear from our happy clients!" info="Our happy Clients"/>

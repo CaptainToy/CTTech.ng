@@ -8,6 +8,9 @@ import './home.css'
 import Hero from '../component/hero/hero'
 import UI from '../component/UI/UI'
 import Breadcrumb from '../component/Breadcrumb/Breadcrumb'
+import Img1 from "../assets/3.jpg"; 
+
+
 const Services =()=>{
         const breadcrumbs = [
           { label: "Home", path: "/" },
@@ -16,7 +19,7 @@ const Services =()=>{
     return(
        <>
             <Navbar/>
-            <div className="con"><Breadcrumb pageName="Services" breadcrumbs={breadcrumbs} /></div>
+            <div className="con"><Breadcrumb pageName="Services" breadcrumbs={breadcrumbs} backgroundImage={Img1}/></div>
             <UI/>
            {/* <Industries/> */}
             {/* <Ourservices/> */}

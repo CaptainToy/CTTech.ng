@@ -20,10 +20,10 @@ const AboutUs = () => {
           </div>
           <h1 className="story-title">Our Story</h1>
           <p className="story-description">
-          Sunil Jagani, a Software Engineering graduate from Elizade University, with expertise in cybersecurity and penetration testing, is a key member of CTTech.
+          CTTech’s journey began 8 years ago with a clear goal: to help local and small businesses create their online presence. The company started by developing custom websites designed to meet the unique needs of each business. As the team gained experience, CTTech expanded its services to include digital marketing and SEO optimization, becoming a reliable partner for companies aiming to grow online.
           </p>
           <p className="journey-description">
-            From Tech Specialist to CTO, Sunil Jagani’s journey to tech innovation is quite impressive. He founded AllianceTek to address corporate challenges:
+          Today, CTTech has transformed into a full-service digital agency, offering comprehensive solutions for businesses of all sizes. With a focus on innovation, the team continues to provide state-of-the-art services to help clients stay ahead in the digital landscape. By blending creativity and technical expertise, CTTech helps businesses reach new heights and achieve lasting success.
           </p>
 
           <div className="challenges">
@@ -42,18 +42,18 @@ const AboutUs = () => {
 
         <div className="about-image">
           <img
-            src="https://i.imgur.com/WbQnbas.png"
+            src="https://i.pinimg.com/736x/f0/81/97/f0819711bf1757b3f72595a36b7035d0.jpg"
             alt="Team collaboration"
             className="main-img"
             onError={(e) => (e.target.src = 'fallback-image.webp')}
           />
-          <div className="highlight-container">
+          {/* <div className="highlight-container">
             <p className="highlight">
               <strong>
                 AllianceTek Now Thrives, Employing 100+ Experts Globally, Serving Clients Worldwide.
               </strong>
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

@@ -6,11 +6,12 @@ import About from './layout/about';
 import Bam from './component/BookAmeating/BAM';
 import Work from './layout/skills';
 import Services from "./layout/services";
-import FAQContainer from './layout/FAQContainer'; 
+import FAQContainer from './layout/FAQContainer';
 import UI from './layout/UIComponent';
 import NoInternet from './component/NetWorkError/network';
 import BamCom from "./layout/BamCom"
-import Form from './component/form/form'
+import NewForm from "./component/NewForm/newForm";
+import Contact from "./layout/contactCom";
 
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -40,7 +41,8 @@ function App() {
           <Route path="/FAQ" element={<FAQContainer />} />
           <Route path="/UI" element={<UI />} />
           <Route path="/BamCom" element={<BamCom />} />
-          <Route path="/Form" element={<Form />} />
+          <Route path="/NewForm" element={<NewForm />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
       ) : (

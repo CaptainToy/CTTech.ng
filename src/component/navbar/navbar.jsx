@@ -27,7 +27,7 @@ const Navbar = () => {
       cancelButtonText: "Cancel",
     }).then((result) => {
       if (result.isConfirmed) {
-        navigate("/BamCom");
+        navigate("/NewForm");
       }
     });
   };
@@ -35,9 +35,10 @@ const Navbar = () => {
   // Animate links when menu opens
   useEffect(() => {
     if (isMenuOpen) {
-      gsap.killTweensOf(linksRef.current);
+      const links = linksRef.current.filter((link) => link); // Ensure refs are not null
+      gsap.killTweensOf(links);
       gsap.fromTo(
-        linksRef.current,
+        links,
         { opacity: 0, y: -20 },
         { opacity: 1, y: 0, stagger: 0.2, duration: 0.5, ease: "power2.out" }
       );
@@ -71,13 +72,50 @@ const Navbar = () => {
         <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
           {["Home", "About", "Our Work", "FAQ", "Contact", "Services"].map(
             (text, index) => (
-              <li key={index} ref={(el) => (linksRef.current[index] = el)}>
-                <Link to={`/${text === "Home" ? "" : text}`}>{text}</Link>
+              <li
+                key={index}
+                ref={(el) => (linksRef.current[index] = el)} // Assign refs dynamically
+              >
+                {text === "Contact" ? (
+                  <Link
+                    to="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (location.pathname === "/") {
+                        // On the homepage, scroll to #contact
+                        const contactSection = document.getElementById("contact");
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                      } else {
+                        // Navigate to homepage and scroll to #contact
+                        navigate("/");
+                        setTimeout(() => {
+                          const contactSection = document.getElementById("contact");
+                          if (contactSection) {
+                            contactSection.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }, 300); // Timeout to allow route change animation
+                      }
+                    }}
+                  >
+                    {text}
+                  </Link>
+                ) : (
+                  <Link to={`/${text === "Home" ? "" : text}`}>{text}</Link>
+                )}
               </li>
             )
           )}
-          <li ref={(el) => (linksRef.current[5] = el)}>
-            <a href="#" onClick={(e) => e.preventDefault(handleBookMeeting())} className="Book">
+          <li ref={(el) => (linksRef.current[6] = el)}>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleBookMeeting();
+              }}
+              className="Book"
+            >
               Book a Meeting
             </a>
           </li>

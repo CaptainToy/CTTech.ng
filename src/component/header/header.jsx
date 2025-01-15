@@ -18,28 +18,20 @@ const HomeContent = () => {
       { opacity: 1, delay: 0.2 }
     );
 
-    // Gasp-from-top animation for the text content
+    // Animate text content from the top
     tl.fromTo(
       textRef.current,
-      { y: "100%", opacity: 0 },
-      { y: "0%", opacity: 1, stagger: 0.3 },
-      "-=1"
+      { y: "-100%", opacity: 0 },
+      { y: "0%", opacity: 1, stagger: 0.1 },
+      "-=0.8" // Overlap with section fade-in slightly
     );
 
-    // Bounce left and right animation for the illustration image
-    gsap.fromTo(
+    // Animate image content from the bottom
+    tl.fromTo(
       imageRef.current,
-      { x: "-50px" },
-      {
-        x: "70px",
-        duration: 1,
-        repeat: 1,
-        yoyo: true,
-        ease: "power1.inOut",
-        onComplete: () => {
-          gsap.to(imageRef.current, { x: "0px", duration: 0.1 });
-        },
-      }
+      { y: "100%", opacity: 0 },
+      { y: "0%", opacity: 1, duration: 1 },
+      "-=0.5" // Overlap slightly with text animation
     );
   }, []);
 

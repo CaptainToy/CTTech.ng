@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 50px;
-  background: var(--light-bg);
+  /* background: var(--light-bg); */
 }
 
 .about-company {

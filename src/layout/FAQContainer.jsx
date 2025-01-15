@@ -1,8 +1,10 @@
 import Navbar from '../component/navbar/navbar';
-import FAQ from '../component/FAQ/FAQ';  // Ensure this imports the correct FAQ component
+import FAQ from '../component/FAQ/FAQ';  
 import './home.css';
 import Footer from '../component/Footer/footer';
 import Breadcrumb from '../component/Breadcrumb/Breadcrumb';
+import Img1 from "../assets/2.jpg"; 
+
 
 const FAQContainer = () => {
   const breadcrumbs = [
@@ -12,7 +14,7 @@ const FAQContainer = () => {
   return (
     <>
       <Navbar />
-      <div className="con"><Breadcrumb pageName="FAQ" breadcrumbs={breadcrumbs} /></div>
+      <div className="con"><Breadcrumb pageName="FAQ" breadcrumbs={breadcrumbs} backgroundImage={Img1}/></div>
       <div className="con"><FAQ /></div>
       <Footer />
     </>

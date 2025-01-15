@@ -9,35 +9,41 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Card = () => {
-    const cardref = useRef([]);
-  
+  const cardref = useRef([]);
+
   const services = [
     {
       icon: <i className="bi bi-phone"></i>,
       title: "Mobile App",
       description: "From pure native to cross-platform, we’ll help you select the best choice for your app.",
+      link: "/mobile-app", // Add the link for each service
     },
     {
-      icon: Front, 
+      icon: Front,
       title: "Web Dev",
       description: "We offer custom web development solutions for startup companies and larger enterprises.",
+      link: "/web-dev",
     },
     {
       icon: Back,
       title: "Backend",
       description: "We build scalable back-end solutions for mobile, web, and desktop systems, adaptable on-premises or in the cloud to meet your evolving needs.",
+      link: "/backend",
     },
     {
       icon: Figma,
       title: "UI/UX",
       description: "We bring expertise in all stages of design, from research to polished prototypes.",
+      link: "/ui-ux",
     },
     {
-      icon:SEO,
+      icon: SEO,
       title: "SEO",
       description: "Quisque neque mus id dapibus egestas platea sagittis fames nunc.",
+      link: "/seo",
     },
   ];
+
   useEffect(() => {
     cardref.current.forEach((el, index) => {
       gsap.fromTo(
@@ -56,21 +62,26 @@ const Card = () => {
       );
     });
   }, []);
+
   return (
     <div className="services-section">
       {services.map((service, index) => (
-        <div className="service-card" key={index} ref={(el) => (cardref.current[index] = el)}>
+        <a
+          href={service.link} // Add the link to each card
+          className="service-card"
+          key={index}
+          ref={(el) => (cardref.current[index] = el)}
+        >
           <div className="icon">
             {typeof service.icon === "string" && service.icon.endsWith(".png") ? (
               <img src={service.icon} alt={service.title} />
             ) : (
-              service.icon 
+              service.icon
             )}
           </div>
           <h3>{service.title}</h3>
-          {/* <h4>lol</h4> */}
           <p>{service.description}</p>
-        </div>
+        </a>
       ))}
     </div>
   );

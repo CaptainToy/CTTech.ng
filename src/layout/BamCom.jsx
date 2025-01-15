@@ -11,10 +11,10 @@ const BamCom =()=>{
       ];
     return(
         <>
-            {/* <Navbar/> */}
-            {/* <div className="con"><Breadcrumb pageName="About Us" breadcrumbs={breadcrumbs} /></div> */}
+            <Navbar/>
+            <div className="con"><Breadcrumb pageName="About Us" breadcrumbs={breadcrumbs} /></div>
             <div className="constant101"><Bam/></div>
-            {/* <Footer/> */}
+            <Footer/>
         </>
     )
 }
