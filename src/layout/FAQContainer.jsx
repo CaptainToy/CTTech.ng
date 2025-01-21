@@ -15,7 +15,7 @@ const FAQContainer = () => {
     <>
       <Navbar />
       <div className="con"><Breadcrumb pageName="FAQ" breadcrumbs={breadcrumbs} backgroundImage={Img1}/></div>
-      <div className="con"><FAQ /></div>
+      <FAQ />
       <Footer />
     </>
   );

@@ -1,20 +1,28 @@
 import React, { useState } from 'react';
+import axios from "axios";
 import './CTA.css';
 
 const CTA = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
+        // Validate Email
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
-            setMessage('Please enter a valid email address.');
+            setMessage("Please enter a valid email address.");
             return;
         }
-        setMessage('Thank you for subscribing!');
-        setEmail('');
+
+        try {
+            const response = await axios.post("http://localhost:3000/subscribe", { email });
+            setMessage(response.data.message);
+            setEmail(""); 
+        } catch (error) {
+            setMessage(error.response?.data?.message || "Error sending email. Please try again.");
+        }
     };
 
     return (
@@ -36,7 +44,6 @@ const CTA = () => {
                     <button type="submit" className="subscribe-button">SUBSCRIBE NOW</button>
                 </form>
                 {message && <p className="subscribe-message">{message}</p>}
-                
             </div>
         </div>
     );

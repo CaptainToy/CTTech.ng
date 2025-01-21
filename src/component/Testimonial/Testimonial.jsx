@@ -1,95 +1,86 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Sample Data
+const testimonials = [
+  {
+    name: "CFPHFoundation",
+    role: "Project/PR Manager",
+    imageUrl: "https://source.unsplash.com/100x100/?portrait?1",
+    quote: "We are thrilled with the exceptional website CTTech designed for CFPH Foundation, showcasing our mission with creativity, professionalism, and attention to detail. The site is visually stunning, user-friendly, and highly responsive, making navigation seamless. We highly recommend CTTech for outstanding web development services."
+  },
+  {
+    name: "Grandural",
+    role: "Project Manager",
+    imageUrl: "https://source.unsplash.com/100x100/?portrait?2",
+    quote: "CTTech delivered a website that exceeded our expectations! Their team's technical expertise, coupled with their ability to understand our brand's unique needs, resulted in a seamless online experience for our organisation, Grandeural Services. We appreciate their professionalism, attention to detail, and timely delivery. CTTech is a reliable partner for any web development project. Kudos to the team!"
+  },
+  {
+    name: "Yetland School",
+    role: "Proprietress",
+    imageUrl: "https://source.unsplash.com/100x100/?portrait?3",
+    quote: "CTTech created a website that went beyond our expectations! Their expertise and deep understanding of our school's unique needs resulted in a seamless and engaging online platform for Yetland School. We truly appreciate their professionalism, attention to detail, and timely delivery. CTTech is a trusted partner for any web development project. Kudos to the team!"
+  }
+];
+
 const Testimonial = () => {
-  const cardRef = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const cardRef = useRef(null);
 
   useEffect(() => {
-    cardRef.current.forEach((el, index) => {
-      if (el) {
-        gsap.fromTo(
-          el,
-          { opacity: 0, y: 50 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            delay: index * 0.2,
-            scrollTrigger: {
-              trigger: el,
-              start: "top 85%",
-            },
-          }
-        );
-      }
-    });
-  }, []);
+    if (cardRef.current) {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 85%",
+          },
+        }
+      );
+    }
+  }, [activeIndex]);
 
   return (
-    <section className="my-8 dark:text-gray-800">
-      <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
-        {["CFPHFoundation", "Grandural", "Yetland School"].map((name, index) => (
-          <div
-            key={index}
-            className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
-            ref={(el) => (cardRef.current[index] = el)}
-          >
-            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-50">
-              <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-800">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  fill="currentColor"
-                  className="w-8 h-8 dark:text-lime-600"
-                >
-                  <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
-                  <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
-                </svg>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptatibus quibusdam, eligendi exercitationem molestias
-                possimus facere.
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  fill="currentColor"
-                  className="absolute right-0 w-8 h-8 dark:text-lime-600"
-                >
-                  <path d="M280,185.143V416H496V16H457.6ZM464,384H312V198.857L464,54.1Z"></path>
-                  <path d="M232,16H193.6L16,185.143V416H232ZM200,384H48V198.857L200,54.1Z"></path>
-                </svg>
-              </p>
-            </div>
-            <div
-              className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:text-white-50"
-              style={{ background: "#4AB90E" }}
-            >
-              <img
-                src={`https://source.unsplash.com/50x50/?portrait?${index + 1}`}
-                alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500"
-              />
-              <p
-                className="text-xl font-semibold leading-tight bg-white-100"
-                style={{ color: "white" }}
-              >
-                {name}
-              </p>
-              <p
-                className="text-sm uppercase dark:bg-white-300"
-                style={{ color: "white" }}
-              >
-                {index === 0
-                  ? "Project/PR Manager"
-                  : index === 1
-                  ? "Project Manager"
-                  : "Proprietress"}
-              </p>
-            </div>
+    <section className="p-6">
+      <div className="container max-w-xl mx-auto ">
+        <div
+          ref={cardRef}
+          className="flex flex-col items-center w-full p-6 space-y-8 rounded-md lg:h-full lg:p-10  dark:text-gray-800"
+        >
+          <img
+            src={testimonials[activeIndex].imageUrl}
+            alt={testimonials[activeIndex].name}
+            className="w-20 h-20 rounded-full dark:bg-gray-500"
+          />
+          <blockquote className="max-w-lg text-lg italic font-medium text-center">
+            "{testimonials[activeIndex].quote}"
+          </blockquote>
+          <div className="text-center dark:text-gray-600">
+            <p>{testimonials[activeIndex].name}</p>
+            <p>{testimonials[activeIndex].role}</p>
           </div>
-        ))}
+          <div className="flex space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                aria-label={`Page ${index + 1}`}
+                className={`w-2 h-2 rounded-full ${
+                  activeIndex === index ? "dark:bg-gray-900" : "dark:bg-gray-400"
+                }`}
+                onClick={() => setActiveIndex(index)}
+              ></button>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

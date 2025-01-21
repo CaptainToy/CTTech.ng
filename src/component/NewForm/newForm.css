@@ -21,7 +21,6 @@
     width: 100%;
     padding: 0 1rem;
     margin: 0 auto;
-    overflow-x: auto; /* Enables horizontal scrolling if necessary */
   }
  /* Form card styling */
   .max-w-xl {

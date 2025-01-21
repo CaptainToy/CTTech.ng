@@ -3,25 +3,33 @@ import React from "react";
 const FAQ = () => {
   const faqData = [
     {
-      question: "What services does your web development company provide?",
-      answer: "We offer a range of services including website design, front-end and back-end development, e-commerce solutions, custom web applications, website maintenance, and SEO optimization."
+        question: "What services does your web development company provide?",
+        answer: "We offer a range of services including website design, front-end and back-end development, e-commerce solutions, custom web applications, website maintenance, and SEO optimization."
     },
     {
-      question: "How long does it take to build a website?",
-      answer: "The timeline depends on the complexity and requirements of the project. A basic website may take 2-4 weeks, while more complex websites or applications can take several months. We ensure timely delivery without compromising quality."
+        question: "How long does it take to build a website?",
+        answer: "The timeline depends on the complexity and requirements of the project. A basic website may take 2-4 weeks, while more complex websites or applications can take several months. We ensure timely delivery without compromising quality."
     },
     {
-      question: "Will my website be mobile-friendly?",
-      answer: "Absolutely. We design and develop websites with a mobile-first approach to ensure they are fully responsive and provide an excellent user experience on all devices."
+        question: "Will my website be mobile-friendly?",
+        answer: "Absolutely. We design and develop websites with a mobile-first approach to ensure they are fully responsive and provide an excellent user experience on all devices."
     },
     {
-      question: "Do you provide website maintenance and support?",
-      answer: "Yes, we offer ongoing maintenance and support services to ensure your website stays updated, secure, and performs optimally."
+        question: "Do you provide website maintenance and support?",
+        answer: "Yes, we offer ongoing maintenance and support services to ensure your website stays updated, secure, and performs optimally."
     },
     {
-      question: "Can you help improve the SEO of my website?",
-      answer: "Yes, our team provides SEO optimization services, including keyword research, on-page SEO, and performance enhancements, to help improve your website's visibility on search engines."
-    }
+        question: "Can you help improve the SEO of my website?",
+        answer: "Yes, our team provides SEO optimization services, including keyword research, on-page SEO, and performance enhancements, to help improve your website's visibility on search engines."
+    },
+    {
+        question: "Do you provide e-commerce website development?",
+        answer: "Yes, we specialize in developing secure and scalable e-commerce websites with features like payment integration, product management, and user-friendly navigation."
+    },
+    {
+        question: "Can you redesign my existing website?",
+        answer: "Yes, we offer website redesign services to enhance the user experience, improve performance, and align with the latest design trends and technologies."
+    },
   ];
 
   return (

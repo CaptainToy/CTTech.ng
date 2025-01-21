@@ -16,13 +16,13 @@ const Card = () => {
       icon: <i className="bi bi-phone"></i>,
       title: "Mobile App",
       description: "From pure native to cross-platform, we’ll help you select the best choice for your app.",
-      link: "/mobile-app", // Add the link for each service
+      link: "#", // Add the link for each service
     },
     {
       icon: Front,
       title: "Web Dev",
       description: "We offer custom web development solutions for startup companies and larger enterprises.",
-      link: "/web-dev",
+      link: "#",
     },
     {
       icon: Back,
@@ -34,13 +34,13 @@ const Card = () => {
       icon: Figma,
       title: "UI/UX",
       description: "We bring expertise in all stages of design, from research to polished prototypes.",
-      link: "/ui-ux",
+      link: "#",
     },
     {
       icon: SEO,
       title: "SEO",
-      description: "Quisque neque mus id dapibus egestas platea sagittis fames nunc.",
-      link: "/seo",
+      description: "SEO improves website visibility and ranking on search engines to drive organic traffic.",
+      link: "#",
     },
   ];
 

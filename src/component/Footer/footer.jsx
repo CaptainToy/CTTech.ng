@@ -13,7 +13,7 @@ const Footer = () => {
             <li><Link to="/about">About</Link></li>
             <li><Link to="/skills">Skills</Link></li>
             <li><Link to="/FAQ">FAQ</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><a href="#">Contact</a></li>
           </ul>
 
           {/* Social Media Icons */}
@@ -28,26 +28,6 @@ const Footer = () => {
               style={{ background: "#E1306C", color: "white" }}
             >
               <i className="bi bi-instagram"></i>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href="https://www.twitter.com"
-              title="Twitter"
-              target="_blank"
-              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10"
-              style={{ background: "#1DA1F2", color: "white" }}
-            >
-              <i className="bi bi-twitter"></i>
-            </a>
-            <a
-              rel="noopener noreferrer"
-              href="https://www.facebook.com"
-              title="Facebook"
-              target="_blank"
-              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10"
-              style={{ background: "#1877F2", color: "white" }}
-            >
-              <i className="bi bi-facebook"></i>
             </a>
             <a
               rel="noopener noreferrer"

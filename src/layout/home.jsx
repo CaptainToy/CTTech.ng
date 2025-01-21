@@ -16,7 +16,6 @@ import Industries from "../component/CWS/industry";
 import GridTemplate from '../component/ourWork/workdone';
 import BusinessSolutionsTab from "../component/BusinessSolutionsTab/BusinessSolutionsTab";
 
-
 const Home = () => {
   return (
     <div>
@@ -25,15 +24,15 @@ const Home = () => {
       <AboutUs />
       <Services />
       <div className="con">
-        <Text content="Services we can help you with 🚀" info="WHAT WE CAN DO FOR YOU" />
+        <Text content="Services we can help you with 🚀" info="How We Can Help You" />
         <Card />
       </div>
       <Industries />
       <div className="con">
-        <Text content="Work that drives client satisfaction and success." info="OUR WORK WELL DONE" />
+        <Text content="Work that drives client satisfaction and success." info="Quality Work, Every Time" />
         <GridTemplate />
-        </div>
-        <Achievements />
+      </div>
+      <Achievements />
       <div className="stact">
         {/* <Stact /> */}
       </div>
