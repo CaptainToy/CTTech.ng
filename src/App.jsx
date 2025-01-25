@@ -9,12 +9,14 @@ import Services from "./layout/services";
 import FAQContainer from './layout/FAQContainer';
 import UI from './layout/UIComponent';
 import NoInternet from './component/NetWorkError/network';
-import BamCom from "./layout/BamCom"
+import BamCom from "./layout/BamCom";
 import NewForm from "./component/NewForm/newForm";
 import Contact from "./layout/contactCom";
+import Loader from "./component/loader/loader";
 
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
@@ -23,11 +25,20 @@ function App() {
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); 
+
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
+      clearTimeout(timer);
     };
   }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <Router>

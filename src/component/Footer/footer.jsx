@@ -13,7 +13,7 @@ const Footer = () => {
             <li><Link to="/about">About</Link></li>
             <li><Link to="/skills">Skills</Link></li>
             <li><Link to="/FAQ">FAQ</Link></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#Contact">Contact</a></li>
           </ul>
 
           {/* Social Media Icons */}
@@ -31,13 +31,23 @@ const Footer = () => {
             </a>
             <a
               rel="noopener noreferrer"
-              href="mailto:example@example.com"
+              href="mailto:ct.tech.ng@gmail.com"
               title="Gmail"
               target="_blank"
               className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10"
               style={{ background: "#D44638", color: "white" }}
             >
               <i className="bi bi-envelope"></i>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="tel:09060475561"
+              title="number"
+              target="_blank"
+              className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10"
+              style={{ background: "green", color: "white" }}
+            >
+              <i class="bi bi-phone"></i>
             </a>
           </div>
         </div>

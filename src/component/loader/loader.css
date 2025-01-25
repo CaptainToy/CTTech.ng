@@ -1,62 +1,75 @@
-/* From Uiverse.io by Nawsome */ 
-.svg-frame {
+/* From Uiverse.io by SchawnnahJ */ 
+.loader101 {
     position: relative;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .svg-frame svg {
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+   }
+   
+   .loader101:before, .loader101:after {
+    content: "";
     position: absolute;
-    transition: .5s;
-    z-index: calc(1 - (0.2 * var(--j)));
-    transform-origin: center;
-    width: 344px;
-    height: 344px;
-    fill: none;
-  }
-  
-  .svg-frame:hover svg {
-    transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
-  }
-  
-  .svg-frame svg #center {
-    transition: .5s;
-    transform-origin: center;
-  }
-  
-  .svg-frame:hover svg #center {
-    transform: rotate(-30deg) translateX(45px) translateY(-3px);
-  }
-  
-  #out2 {
-    animation: rotate16 7s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #out3 {
-    animation: rotate16 3s ease-in-out infinite alternate;
-    transform-origin: center;
-    stroke: #ff0;
-  }
-  
-  #inner3,
-  #inner1 {
-    animation: rotate16 4s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #center1 {
-    fill: #ff0;
-    animation: rotate16 2s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  @keyframes rotate16 {
-    to {
-      transform: rotate(360deg);
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+   }
+   
+   .loader101:before {
+    animation: before8 2s infinite;
+   }
+   
+   .loader101:after {
+    animation: after6 2s infinite;
+   }
+   
+   @keyframes before8 {
+    0% {
+     width: 0.5em;
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
     }
-  }
+   
+    35% {
+     width: 2.5em;
+     box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    70% {
+     width: 0.5em;
+     box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   
+    100% {
+     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+   }
+   
+   @keyframes after6 {
+    0% {
+     height: 0.5em;
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   
+    35% {
+     height: 2.5em;
+     box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+   
+    70% {
+     height: 0.5em;
+     box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+   
+    100% {
+     box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+   }
+   
+   .loader101 {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+   }

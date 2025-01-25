@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Yetland from "../../assets/yetland.jpg"
+import Cfphf from "../../assets/cfphf.png"
+import Grand from "../../assets/grand.png"
 gsap.registerPlugin(ScrollTrigger);
 
 // Sample Data
@@ -9,19 +11,19 @@ const testimonials = [
   {
     name: "CFPHFoundation",
     role: "Project/PR Manager",
-    imageUrl: "https://source.unsplash.com/100x100/?portrait?1",
+    imageUrl: Cfphf,
     quote: "We are thrilled with the exceptional website CTTech designed for CFPH Foundation, showcasing our mission with creativity, professionalism, and attention to detail. The site is visually stunning, user-friendly, and highly responsive, making navigation seamless. We highly recommend CTTech for outstanding web development services."
   },
   {
     name: "Grandural",
     role: "Project Manager",
-    imageUrl: "https://source.unsplash.com/100x100/?portrait?2",
+    imageUrl: Grand,
     quote: "CTTech delivered a website that exceeded our expectations! Their team's technical expertise, coupled with their ability to understand our brand's unique needs, resulted in a seamless online experience for our organisation, Grandeural Services. We appreciate their professionalism, attention to detail, and timely delivery. CTTech is a reliable partner for any web development project. Kudos to the team!"
   },
   {
     name: "Yetland School",
     role: "Proprietress",
-    imageUrl: "https://source.unsplash.com/100x100/?portrait?3",
+    imageUrl: Yetland,
     quote: "CTTech created a website that went beyond our expectations! Their expertise and deep understanding of our school's unique needs resulted in a seamless and engaging online platform for Yetland School. We truly appreciate their professionalism, attention to detail, and timely delivery. CTTech is a trusted partner for any web development project. Kudos to the team!"
   }
 ];
@@ -58,7 +60,7 @@ const Testimonial = () => {
           <img
             src={testimonials[activeIndex].imageUrl}
             alt={testimonials[activeIndex].name}
-            className="w-20 h-20 rounded-full dark:bg-gray-500"
+            className="w-20 h-20 rounded-full "
           />
           <blockquote className="max-w-lg text-lg italic font-medium text-center">
             "{testimonials[activeIndex].quote}"
